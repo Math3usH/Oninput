@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html>
+<head>
+    <title>tabuada</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+    
+        h1 {
+            color: #1900ffb4;
+            font-size: 50px;
+        }
+        h1:hover{
+            font-size: 51px;
+        }
+    
+        label {
+            font-size: 1.3rem;
+            margin-right: 10px;
+        }
+    
+        input {
+            width: 80px;
+            padding: 5px;
+            font-size: 1rem;
+            border: 2px solid #333;
+            border-radius: 5px;
+        }
+        label:hover{
+            color: #5e5e5e;
+            font-size: 20px;
+        }
+        input:hover{
+            font-size: 16.5px;
+        }
+    </style>
+    
+</head>
+<body>
+    <h1>Tabuada</h1>
+    <label for="numero">Digite um número:</label>
+    <input type="number" id="numero" oninput="exibirTabuada()">
+    <div id="tabuada"></div>
+
+    <script>
+        function exibirTabuada() {
+            const numero = document.getElementById("numero").value;
+
+            document.getElementById("tabuada").innerHTML = "";
+
+            for (let contador = 1; contador <= 10; contador++) {
+                const resultado = numero * contador;
+                document.getElementById("tabuada").innerHTML += numero + " x " + contador + " = " + resultado + "<br>";
+            }
+        }
+    </script>
+</body>
+</html>
+
+
